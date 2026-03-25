@@ -21,40 +21,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ancient Proof — Ginseng Infused Kentucky Whiskey</title>
-<meta name="description" content="Ancient Proof — Ancient American ginseng hunting secrets meet modern hi-tech extraction science. Premium ginseng-infused Kentucky whiskey. Wild-harvested. American harvested. Est. 2020.">
+<meta name="description" content="Ancient Proof — Ancient American ginseng hunting secrets meet modern extraction science. Premium ginseng-infused Kentucky whiskey. American harvested. Est. 2020.">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Ancient Proof — Ginseng Infused Kentucky Whiskey">
-<meta property="og:description" content="Ancient American ginseng secrets meet modern extraction technology. Premium ginseng-infused Kentucky whiskey. Ancient secrets meet modern science.">
-<meta property="og:image" content="./assets/hero-forest.png">
+<meta property="og:description" content="Ancient American ginseng secrets meet modern extraction technology. Premium ginseng-infused Kentucky whiskey.">
+<meta property="og:image" content="./assets/hero-distillery.png">
 <meta property="og:type" content="website">
 
 <!-- Favicon -->
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 
-<!-- Fonts: Playfair Display (display) + DM Sans (body) -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Preload Hero Image -->
+<!-- Preload Hero -->
 <link rel="preload" as="image" href="./assets/hero-distillery.png">
 
 <!-- Styles -->
 <link rel="stylesheet" href="./style.css">
 
-<!-- JSON-LD Structured Data -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Ancient Proof",
-  "alternateName": "Gincohol",
   "url": "https://gincohol.com",
   "telephone": "1-270-784-5012",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Graham",
+    "addressLocality": "Bourbon County",
     "addressRegion": "Kentucky",
     "addressCountry": "US"
   },
@@ -70,15 +69,40 @@
 </head>
 <body>
 
+<!-- Age Verification Gate -->
+<div class="age-gate" id="ageGate">
+  <div class="age-gate__card">
+    <div class="age-gate__logo">
+      <svg viewBox="0 0 36 36" width="36" height="36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M18 28c0 0-3-2-5-6s-3-9-1-13c1-2 3-3 6-3s5 1 6 3c2 4 1 9-1 13s-5 6-5 6z" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="1"/>
+        <path d="M15 16c1-3 3-5 3-5s2 2 3 5" stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <circle cx="18" cy="12" r="1.5" fill="currentColor" opacity="0.4"/>
+        <circle cx="16" cy="13.5" r="1" fill="currentColor" opacity="0.3"/>
+        <circle cx="20" cy="13.5" r="1" fill="currentColor" opacity="0.3"/>
+      </svg>
+      <span>Ancient Proof</span>
+    </div>
+    <h2 class="age-gate__title">Are You of Legal Drinking Age?</h2>
+    <p class="age-gate__subtitle">You must be 21 years or older to enter this site. Please enter your date of birth.</p>
+    <div class="age-gate__fields">
+      <input type="text" id="ageMonth" class="age-gate__input" placeholder="MM" maxlength="2" inputmode="numeric" autocomplete="off">
+      <input type="text" id="ageDay" class="age-gate__input" placeholder="DD" maxlength="2" inputmode="numeric" autocomplete="off">
+      <input type="text" id="ageYear" class="age-gate__input" placeholder="YYYY" maxlength="4" inputmode="numeric" autocomplete="off" style="width: 100px;">
+    </div>
+    <p class="age-gate__error" id="ageError"></p>
+    <button class="age-gate__btn" id="ageVerifyBtn">Enter the Still</button>
+    <p class="age-gate__disclaimer">By entering, you agree that you are of legal drinking age in your location. Please drink responsibly.</p>
+  </div>
+</div>
+
 <!-- Skip Link -->
 <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- ============================================ -->
 <!-- HEADER -->
-<!-- ============================================ -->
 <header class="header" id="header">
   <div class="header__inner">
-    <a href="#" class="header__logo" aria-label="Ancient Proof Home">
+    <a href="index.html" class="header__logo" aria-label="Ancient Proof Home">
       <svg viewBox="0 0 36 36" width="36" height="36" fill="none" aria-hidden="true">
         <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2"/>
         <path d="M18 28c0 0-3-2-5-6s-3-9-1-13c1-2 3-3 6-3s5 1 6 3c2 4 1 9-1 13s-5 6-5 6z" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="1"/>
@@ -92,27 +116,25 @@
 
     <nav class="header__nav" id="nav" aria-label="Main navigation">
       <ul class="header__nav-list">
-        <li><a href="#the-spirit" class="header__nav-link">The Spirit</a></li>
-        <li><a href="#the-root" class="header__nav-link">The Root</a></li>
-        <li><a href="#the-craft" class="header__nav-link">The Craft</a></li>
-        <li><a href="#heritage" class="header__nav-link">Heritage</a></li>
-        <li><a href="#team" class="header__nav-link">Team</a></li>
-        <li><a href="#contact" class="header__nav-link">Contact</a></li>
+        <li><a href="index.html" class="header__nav-link active">Home</a></li>
+        <li><a href="store.html" class="header__nav-link">Store</a></li>
+        <li><a href="gallery.html" class="header__nav-link">Gallery</a></li>
+        <li><a href="about.html" class="header__nav-link">About</a></li>
+        <li><a href="contact.html" class="header__nav-link">Contact</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
         <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"/>
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
         </svg>
         <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
 
-      <a href="#contact" class="btn btn--sm btn--primary header__cta">Inquire</a>
+      <a href="contact.html" class="btn btn--sm btn--primary header__cta">Inquire</a>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
         <span class="hamburger__line"></span>
@@ -123,17 +145,13 @@
   </div>
 </header>
 
-<!-- ============================================ -->
 <!-- MAIN -->
-<!-- ============================================ -->
 <main id="main">
 
-<!-- ============================================ -->
 <!-- 1. HERO -->
-<!-- ============================================ -->
 <section class="hero" id="hero">
   <div class="hero__bg">
-    <img src="./assets/hero-distillery.png" alt="Kentucky bourbon distillery at golden hour with wild ginseng growing in the foreground" class="hero__bg-img" loading="eager">
+    <img src="./assets/hero-distillery.png" alt="Kentucky bourbon distillery at golden hour" class="hero__bg-img" loading="eager">
     <div class="hero__overlay"></div>
   </div>
   <div class="hero__content">
@@ -157,8 +175,8 @@
       </div>
     </div>
     <div class="hero__ctas reveal">
-      <a href="#the-spirit" class="btn btn--primary btn--lg">Discover the Spirit</a>
-      <a href="#the-root" class="btn btn--outline btn--lg">The Ginseng Story</a>
+      <a href="store.html" class="btn btn--primary btn--lg">Explore the Store</a>
+      <a href="about.html" class="btn btn--outline btn--lg">Our Story</a>
     </div>
   </div>
   <div class="hero__scroll-hint" aria-hidden="true">
@@ -167,235 +185,96 @@
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- 2. THE SPIRIT (Products) -->
-<!-- ============================================ -->
-<section class="section products" id="the-spirit">
+<!-- 2. FEATURED PRODUCTS -->
+<section class="section featured-products" id="featured-products">
   <div class="container">
-    <div class="products__layout">
-      <div class="products__image reveal">
-        <img src="./assets/bottle-display.png" alt="Ancient Proof ginseng-infused whiskey bottle with amber liquid" loading="lazy" width="600" height="600">
-      </div>
-      <div class="products__text">
-        <span class="section__tag reveal">The Spirit</span>
-        <h2 class="section__title reveal">A Taste Like<br>No Other</h2>
-        <p class="section__body reveal">Ancient Proof is the world's first premium ginseng-infused whiskey — where generations of American ginseng hunting knowledge meets proprietary modern extraction science. Smoky oak, layered with earthy warmth, finishing with the unmistakable vitality of wild-harvested Appalachian root.</p>
-      </div>
-    </div>
+    <span class="section__tag reveal">The Spirit</span>
+    <h2 class="section__title reveal" style="text-align: center;">A Taste Like No Other</h2>
 
-    <div class="products__cards">
+    <div class="featured-products__scroll">
       <div class="product-card reveal">
+        <div class="product-card__image">
+          <img src="./assets/bottle-display.png" alt="Ancient Proof Original Blend bottle" loading="lazy">
+        </div>
         <div class="product-card__badge">Flagship</div>
         <h3 class="product-card__name">Original Blend</h3>
         <p class="product-card__desc">Wild ginseng root steeped in aged Kentucky bourbon. Smooth, warm, and unmistakable.</p>
-        <div class="product-card__price">
+        <div class="product-card__meta">
           <span class="product-card__amount">700 mL</span>
         </div>
-        <span class="btn btn--primary btn--full">Coming Soon</span>
+        <a href="store.html" class="btn btn--primary btn--full">Coming Soon</a>
       </div>
 
       <div class="product-card product-card--featured reveal">
+        <div class="product-card__image">
+          <div class="product-card__image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Image Coming Soon</span>
+          </div>
+        </div>
         <div class="product-card__badge">Reserve</div>
         <h3 class="product-card__name">Barrel Select</h3>
         <p class="product-card__desc">Single-barrel aged with hand-selected ginseng roots. Limited small-batch release.</p>
-        <div class="product-card__price">
+        <div class="product-card__meta">
           <span class="product-card__amount">750 mL</span>
         </div>
-        <span class="btn btn--primary btn--full">Coming Soon</span>
+        <a href="store.html" class="btn btn--primary btn--full">Coming Soon</a>
       </div>
 
       <div class="product-card reveal">
+        <div class="product-card__image">
+          <div class="product-card__image-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Image Coming Soon</span>
+          </div>
+        </div>
         <div class="product-card__badge">Gift Set</div>
         <h3 class="product-card__name">The Hunter's Collection</h3>
         <p class="product-card__desc">Original Blend with engraved ginseng root flask and tasting notes journal.</p>
-        <div class="product-card__price">
+        <div class="product-card__meta">
           <span class="product-card__amount">Limited Edition</span>
         </div>
-        <span class="btn btn--primary btn--full">Coming Soon</span>
+        <a href="store.html" class="btn btn--primary btn--full">Coming Soon</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- 3. THE ROOT (Benefits / Ginseng Focus) -->
-<!-- ============================================ -->
-<section class="section section--alt benefits" id="the-root">
+<!-- 3. THE ROOT (Brief) -->
+<section class="section section--alt" id="the-root">
   <div class="container">
-    <div class="benefits__header">
-      <div class="benefits__image reveal">
-        <img src="./assets/ginseng-root.png" alt="Wild Appalachian ginseng root freshly dug from forest soil" loading="lazy" width="600" height="750">
+    <div class="home-split">
+      <div class="home-split__image reveal">
+        <img src="./assets/gallery-ginseng-wild.jpg" alt="Wild American ginseng in natural habitat" loading="lazy">
       </div>
-      <div class="benefits__intro">
+      <div class="home-split__text">
         <span class="section__tag reveal">The Root</span>
         <h2 class="section__title reveal">The Power of<br>Wild Ginseng</h2>
-        <p class="section__body reveal">For centuries, American ginseng hunters have walked the Appalachian hollers in a quiet ritual — reading the land, finding the prong, unearthing the root with bare hands and a mattock. Ancient Proof carries that tradition forward with modern precision in every pour.</p>
-      </div>
-    </div>
-
-    <div class="benefits__grid">
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c-6 10-14 16-14 24a14 14 0 0 0 28 0C38 20 30 14 24 4z"/><path d="M17 28a8 8 0 0 0 8 8" opacity="0.5"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Natural Energy</h3>
-        <p class="benefit-card__desc">Wild ginseng has been used for centuries to boost stamina and endurance — nature's original performance enhancer.</p>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M16 28c2-4 6-6 8-6s6 2 8 6" opacity="0.5"/><circle cx="18" cy="20" r="2"/><circle cx="30" cy="20" r="2"/><path d="M6 24h4M38 24h4M24 6v4M24 38v4"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Cognitive Clarity</h3>
-        <p class="benefit-card__desc">Ginseng sharpens mental focus and supports memory function — the hunter's edge on the mountain.</p>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36l6-12 6 8 6-16 6 20"/><rect x="8" y="8" width="32" height="32" rx="4"/><circle cx="16" cy="16" r="3" opacity="0.5"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Adaptogenic Power</h3>
-        <p class="benefit-card__desc">A natural adaptogen that helps the body manage stress and restore balance — ancient wisdom, modern science.</p>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="12"/><path d="M12 20h24" opacity="0.3"/><path d="M18 32v8M30 32v8M24 32v10"/><path d="M16 14l4 6M28 14l-4 6M24 8v6" opacity="0.5"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Immune Support</h3>
-        <p class="benefit-card__desc">Rich in ginsenosides that strengthen the body's natural defenses — the root that keeps you going.</p>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z"/><circle cx="24" cy="30" r="12" opacity="0.3"/><path d="M20 34c2-2 6-2 8 0" opacity="0.5"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Anti-Inflammatory</h3>
-        <p class="benefit-card__desc">Reduces inflammation and oxidative stress — why ginseng hunters stay strong well into their later years.</p>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-card__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z"/><path d="M16 20v-2a8 8 0 0 1 16 0v2" opacity="0.5"/><path d="M12 28c4 6 10 8 12 8s8-2 12-8"/></svg>
-        </div>
-        <h3 class="benefit-card__title">Passed Down, Perfected</h3>
-        <p class="benefit-card__desc">Generations of American ginseng hunters passed down secret techniques for finding and harvesting the root. We honor that knowledge and elevate it with modern extraction science.</p>
+        <p class="section__body reveal">For centuries, American ginseng hunters have walked the Appalachian hollers in a quiet ritual — reading the land, finding the prong, unearthing the root with bare hands and a mattock. Ancient Proof carries that tradition forward.</p>
+        <a href="about.html" class="btn btn--ghost reveal">Learn More</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- 4. THE CRAFT (Science/Process) -->
-<!-- ============================================ -->
-<section class="section science" id="the-craft">
+<!-- 4. THE CRAFT (Brief) -->
+<section class="section" id="the-craft">
   <div class="container">
-    <div class="science__layout">
-      <div class="science__text">
+    <div class="home-split home-split--reverse">
+      <div class="home-split__image reveal">
+        <img src="./assets/gallery-copper-craft.jpg" alt="Handcrafted copper still for extraction" loading="lazy">
+      </div>
+      <div class="home-split__text">
         <span class="section__tag reveal">The Craft</span>
         <h2 class="section__title reveal">From Forest Floor<br>to Barrel</h2>
-        <p class="section__body reveal">Every bottle of Ancient Proof begins in the shaded hollows of Appalachia, where wild American ginseng grows slowly beneath the canopy — sometimes taking decades to mature. The root is harvested by hand using techniques passed down through generations of Kentucky hunters.</p>
-        <p class="section__body reveal">Then, modern science takes over. Our <strong>proprietary hi-tech extraction process</strong> captures the full spectrum of ginsenosides — the active compounds that make ginseng legendary — while harmonizing perfectly with aged Kentucky straight bourbon. Ancient secrets. Modern precision. <strong>No shortcuts. No synthetics. Just the root and the proof.</strong></p>
-      </div>
-      <div class="science__stats reveal">
-        <div class="science__stat-card">
-          <span class="science__stat-number">3+</span>
-          <span class="science__stat-text">Generations of Ginseng Hunting</span>
-        </div>
-        <div class="science__stat-card">
-          <span class="science__stat-number">80</span>
-          <span class="science__stat-text">Proof / 40% ALC</span>
-        </div>
-        <div class="science__stat-card">
-          <span class="science__stat-number">100%</span>
-          <span class="science__stat-text">American Wild-Harvested Ginseng</span>
-        </div>
-        <div class="science__stat-card">
-          <span class="science__stat-number">KY</span>
-          <span class="science__stat-text">Crafted in Bourbon County, Kentucky</span>
-        </div>
+        <p class="section__body reveal">Our proprietary hi-tech extraction process captures the full spectrum of ginsenosides while harmonizing perfectly with aged Kentucky straight bourbon. Ancient secrets. Modern precision. No shortcuts.</p>
+        <a href="about.html" class="btn btn--ghost reveal">Explore the Process</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- 5. HERITAGE (Story/Timeline) -->
-<!-- ============================================ -->
-<section class="section section--dark story" id="heritage">
-  <div class="container">
-    <span class="section__tag reveal">Our Heritage</span>
-    <h2 class="section__title reveal">Rooted in the Hills</h2>
-
-    <div class="story__timeline">
-      <div class="story__event reveal">
-        <span class="story__year">Roots</span>
-        <div class="story__detail">
-          <h3>The Ancient Hunters</h3>
-          <p>For centuries, American ginseng hunters walked the Appalachian hills with mattocks and burlap sacks — guided by secret techniques passed from father to son. Where to look, how to read the forest, when the root is ready. Knowledge that can't be taught in a classroom.</p>
-        </div>
-      </div>
-
-      <div class="story__event reveal">
-        <span class="story__year">Land</span>
-        <div class="story__detail">
-          <h3>Bourbon County, Kentucky</h3>
-          <p>On the fertile rolling hills of rural Kentucky, where the soil runs deep and the hollows stay cool, the perfect conditions for wild American ginseng have existed for centuries. Three generations of the family have worked this land.</p>
-        </div>
-      </div>
-
-      <div class="story__event reveal">
-        <span class="story__year">Science</span>
-        <div class="story__detail">
-          <h3>Modern Extraction Meets Ancient Wisdom</h3>
-          <p>We paired generational hunting knowledge with proprietary hi-tech extraction science — preserving every ginsenoside, every trace compound, every element that makes wild American ginseng the most prized root on earth. Ancient secrets, modern precision.</p>
-        </div>
-      </div>
-
-      <div class="story__event reveal">
-        <span class="story__year">2020</span>
-        <div class="story__detail">
-          <h3>Ancient Proof Is Born</h3>
-          <p>The world's first premium ginseng-infused whiskey — where the Kentucky wild meets the laboratory, and centuries of hunting tradition fuse with cutting-edge science inside an aged bourbon barrel. Not just a drink. A movement.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- 6. THE TEAM -->
-<!-- ============================================ -->
-<section class="section team" id="team">
-  <div class="container">
-    <span class="section__tag reveal">Leadership</span>
-    <h2 class="section__title reveal">The Team Behind<br>the Proof</h2>
-
-    <div class="team__grid">
-      <div class="team-card reveal">
-        <div class="team-card__photo">
-          <img src="./assets/team-heath.png" alt="Heath Bennett, CEO of Ancient Proof" loading="lazy" width="400" height="400">
-        </div>
-        <h3 class="team-card__name">Heath Bennett</h3>
-        <span class="team-card__role">Chief Executive Officer</span>
-        <p class="team-card__bio">Visionary leader driving Ancient Proof from concept to market. Combines deep Kentucky roots with a bold vision for what a modern spirits brand can be — bridging heritage ginseng culture with cutting-edge extraction science.</p>
-      </div>
-
-      <div class="team-card reveal">
-        <div class="team-card__photo">
-          <img src="./assets/team-jonathan.png" alt="Jonathan Swistock, VP of Business Development" loading="lazy" width="400" height="400">
-        </div>
-        <h3 class="team-card__name">Jonathan Swistock</h3>
-        <span class="team-card__role">VP of Business Development</span>
-        <p class="team-card__bio">Strategic architect scaling Ancient Proof from a Kentucky-born idea into a national brand. Leads partnerships, distribution, and market expansion — connecting the spirit with retailers, bars, and enthusiasts nationwide.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- 6b. TESTIMONIALS -->
-<!-- ============================================ -->
+<!-- 5. TESTIMONIALS -->
 <section class="section section--alt endorsements" id="endorsements">
   <div class="container">
     <span class="section__tag reveal">The Word</span>
@@ -438,66 +317,26 @@
   </div>
 </section>
 
-<!-- ============================================ -->
-<!-- 7. CTA BANNER -->
-<!-- ============================================ -->
+<!-- 6. CTA BANNER -->
 <section class="cta-banner" id="cta-banner">
   <div class="container">
     <h2 class="cta-banner__title reveal">Where the Wild Meets the Lab</h2>
-    <p class="cta-banner__subtitle reveal">Ancient American ginseng secrets. Modern extraction science. One legendary Kentucky whiskey. Be the first to taste the proof.</p>
-    <a href="#contact" class="btn btn--primary btn--lg reveal">Get Notified</a>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- 8. CONTACT -->
-<!-- ============================================ -->
-<section class="section contact" id="contact">
-  <div class="container">
-    <span class="section__tag reveal">Get in Touch</span>
-    <h2 class="section__title reveal">Contact Us</h2>
-
-    <div class="contact__grid">
-      <div class="contact-card reveal">
-        <div class="contact-card__icon">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-        </div>
-        <h3>Email</h3>
-        <a href="mailto:info@gincohol.com" class="contact-card__link">info@gincohol.com</a>
-        <p class="contact-card__sub">Partnerships & Inquiries</p>
-      </div>
-
-      <div class="contact-card reveal">
-        <div class="contact-card__icon">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <h3>Phone</h3>
-        <a href="tel:12707845012" class="contact-card__link">1.270.784.5012</a>
-        <p class="contact-card__sub">Graham, Kentucky</p>
-      </div>
-
-      <div class="contact-card reveal">
-        <div class="contact-card__icon">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Location</h3>
-        <p>Bourbon County</p>
-        <p class="contact-card__sub">Kentucky</p>
-      </div>
+    <p class="cta-banner__subtitle reveal">Ancient American ginseng secrets. Modern extraction science. One legendary Kentucky whiskey.</p>
+    <div class="cta-banner__actions reveal">
+      <a href="store.html" class="btn btn--primary btn--lg">View the Store</a>
+      <a href="about.html" class="btn btn--outline btn--lg">Our Story</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ============================================ -->
-<!-- 9. FOOTER -->
-<!-- ============================================ -->
+<!-- FOOTER -->
 <footer class="footer" id="footer">
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <a href="#" class="footer__logo" aria-label="Ancient Proof Home">
+        <a href="index.html" class="footer__logo" aria-label="Ancient Proof Home">
           <svg viewBox="0 0 36 36" width="32" height="32" fill="none" aria-hidden="true">
             <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.2"/>
             <path d="M18 28c0 0-3-2-5-6s-3-9-1-13c1-2 3-3 6-3s5 1 6 3c2 4 1 9-1 13s-5 6-5 6z" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="1"/>
@@ -508,18 +347,18 @@
           </svg>
           <span>Ancient Proof</span>
         </a>
-        <p class="footer__tagline">Ginseng-Infused Kentucky Whiskey — Ancient Proof</p>
+        <p class="footer__tagline">Ginseng-Infused Kentucky Whiskey — Est. 2020</p>
       </div>
 
       <div class="footer__links">
         <div class="footer__col">
           <h4>Navigate</h4>
           <ul>
-            <li><a href="#the-spirit">The Spirit</a></li>
-            <li><a href="#the-root">The Root</a></li>
-            <li><a href="#the-craft">The Craft</a></li>
-            <li><a href="#heritage">Heritage</a></li>
-            <li><a href="#team">Team</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -533,14 +372,14 @@
           <ul>
             <li><a href="mailto:info@gincohol.com">info@gincohol.com</a></li>
             <li><a href="tel:12707845012">1.270.784.5012</a></li>
-            <li>Graham, KY</li>
+            <li>Bourbon County, KY</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p>&copy; 2026 Ancient Proof / Gincohol. All rights reserved. Please drink responsibly.</p>
+      <p>&copy; 2026 Ancient Proof. All rights reserved. Please drink responsibly.</p>
       <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer__pplx">Created with Perplexity Computer</a>
     </div>
   </div>
