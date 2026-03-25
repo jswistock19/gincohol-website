@@ -439,6 +439,17 @@
     });
   }
 
+  // ---- Email Capture Form ----
+  const emailForm = document.getElementById('emailCaptureForm');
+  const emailSuccess = document.getElementById('emailSuccess');
+  if (emailForm) {
+    emailForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      emailForm.style.display = 'none';
+      if (emailSuccess) emailSuccess.style.display = 'block';
+    });
+  }
+
   // ---- Active Navigation State (multi-page) ----
   // Determine current page from URL
   const currentPath = window.location.pathname;

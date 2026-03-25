@@ -2335,3 +2335,148 @@ body {
 .text-center {
   text-align: center;
 }
+
+/* ============================================
+   RECIPES GRID
+   ============================================ */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.recipe-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recipe-card__header {
+  padding: var(--space-5) var(--space-5) var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recipe-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.recipe-card__badge {
+  background: var(--color-primary);
+  color: #1A110A;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.recipe-card__body {
+  padding: var(--space-5);
+}
+
+.recipe-card__ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+}
+
+.recipe-card__ingredients li {
+  padding: var(--space-1) 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recipe-card__ingredients li::before {
+  content: '\2022';
+  color: var(--color-primary);
+  margin-right: var(--space-2);
+  font-weight: 700;
+}
+
+.recipe-card__method {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ============================================
+   EMAIL CAPTURE
+   ============================================ */
+.email-capture {
+  text-align: center;
+  margin-top: var(--space-10);
+  padding: var(--space-10) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.email-capture__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.email-capture__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.email-capture__form {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.email-capture__input {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 200ms;
+}
+
+.email-capture__input:focus {
+  border-color: var(--color-primary);
+}
+
+.email-capture__input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.email-capture__success {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 480px) {
+  .email-capture__form {
+    flex-direction: column;
+  }
+}
