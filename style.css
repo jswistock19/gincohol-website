@@ -2480,3 +2480,56 @@ body {
     flex-direction: column;
   }
 }
+
+
+/* ---- Digger's Flight Package ---- */
+.flight-package {
+  margin-top: var(--space-6);
+}
+
+.flight-package__card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0;
+}
+
+.flight-package__image {
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border-right: 1px solid var(--border-color);
+}
+
+.flight-package__image svg {
+  opacity: 0.4;
+  color: var(--color-primary);
+}
+
+.flight-package__details {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flight-package__price {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .flight-package__card {
+    grid-template-columns: 1fr;
+  }
+  .flight-package__image {
+    min-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
