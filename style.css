@@ -2533,3 +2533,13 @@ body {
     border-bottom: 1px solid var(--border-color);
   }
 }
+
+/* Single-card team grid — centered */
+.team-grid--single {
+  display: flex;
+  justify-content: center;
+}
+.team-grid--single .team-card {
+  max-width: 420px;
+  width: 100%;
+}
