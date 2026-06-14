@@ -2554,3 +2554,184 @@ body {
   max-width: 420px;
   width: 100%;
 }
+
+
+/* ============================================================
+   MOBILE HARDENING PATCH — June 2026
+   Comprehensive responsive fixes for phones (<=768px) and small
+   phones (<=480px). Additive — does not override existing rules
+   except where mobile clearly needs tighter constraints.
+   ============================================================ */
+
+/* Kill any horizontal overflow site-wide */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (max-width: 900px) {
+  /* Header: shrink padding so logo + Inquire fit on narrow screens */
+  .header__inner, .header > .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+  /* Make sure the hamburger / menu toggle is visible & tappable */
+  .nav-toggle, .header__menu-toggle, .menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--border-color, rgba(201,164,74,0.4));
+    border-radius: 8px;
+    color: var(--accent, #c9a44a);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  /* HERO ---------------------------------------------------- */
+  .hero {
+    min-height: 92vh;
+    min-height: 92dvh;
+    padding-top: calc(var(--header-height) + var(--space-6));
+    padding-bottom: var(--space-8);
+  }
+  .hero__title {
+    font-size: clamp(2.75rem, 13vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .hero__tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+  }
+  .hero__subtitle, .hero p {
+    font-size: 1rem;
+    line-height: 1.55;
+    max-width: 100%;
+  }
+
+  /* HERO STATS — stack neatly, kill vertical dividers ------- */
+  .hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+  }
+  .hero__stat {
+    flex: 1 1 45%;
+    min-width: 0;
+  }
+  .hero__stat-divider {
+    display: none;
+  }
+  .hero__stat-value { font-size: 1.1rem; }
+  .hero__stat-label { font-size: 0.65rem; letter-spacing: 0.2em; }
+
+  /* HERO CTAs — stack full width ---------------------------- */
+  .hero__ctas, .btn-row, .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+    width: 100%;
+  }
+  .hero__ctas .btn,
+  .btn-row .btn,
+  .cta-row .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* SECTION PADDING — breathe properly on mobile ------------ */
+  section, .section {
+    padding-top: var(--space-7, 3rem);
+    padding-bottom: var(--space-7, 3rem);
+  }
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* TYPOGRAPHY — scale headings down ------------------------ */
+  h1 { font-size: clamp(2rem, 9vw, 3rem); line-height: 1.1; }
+  h2 { font-size: clamp(1.625rem, 7vw, 2.25rem); line-height: 1.15; }
+  h3 { font-size: clamp(1.25rem, 5vw, 1.5rem); line-height: 1.25; }
+  .section__title, .section-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+
+  /* GRIDS — force single column on phones ------------------- */
+  .store-grid,
+  .gallery-grid,
+  .legend-grid,
+  .product-grid,
+  .team-grid,
+  .feature-grid,
+  .three-col,
+  .four-col {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-5);
+  }
+
+  /* CARDS — tighter padding, full bleed --------------------- */
+  .card, .legend-card, .product-card, .team-card, .feature-card {
+    padding: var(--space-5);
+  }
+
+  /* IMAGES — never overflow --------------------------------- */
+  img, picture, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* FOOTER — stack columns ---------------------------------- */
+  .footer__grid, .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6);
+    text-align: left;
+  }
+
+  /* TESTIMONIALS / QUOTES ----------------------------------- */
+  .testimonial, .quote {
+    padding: var(--space-5);
+    font-size: 1rem;
+  }
+
+  /* AGE GATE — fit phone screens cleanly -------------------- */
+  #ageGate .age-gate__card, .age-gate__card, #ageGate > div {
+    width: calc(100vw - 32px);
+    max-width: 420px;
+    padding: var(--space-6) var(--space-5);
+  }
+  #ageMonth, #ageDay, #ageYear {
+    font-size: 1rem;
+  }
+}
+
+/* Tiny phones (<=480px) — extra tightening */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(2.5rem, 14vw, 3.75rem);
+  }
+  .hero__stat {
+    flex: 1 1 100%;
+  }
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+  .btn { font-size: 0.95rem; padding: 0.85rem 1.25rem; }
+}
+
+/* Safe-area insets for iPhone notches */
+@supports (padding: max(0px)) {
+  .header__inner, .footer, .container {
+    padding-left: max(var(--space-4), env(safe-area-inset-left));
+    padding-right: max(var(--space-4), env(safe-area-inset-right));
+  }
+}
