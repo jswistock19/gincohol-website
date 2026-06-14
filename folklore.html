@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folklore — The Legend of the Jinroot Fox · Ancient Proof</title>
+<meta name="description" content="The Appalachian folklore behind Ancient Proof: the legend of the Jinroot Fox, the Code of the slope, and the sang-hunter HEZ who found the 250-year-old root.">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<style>
+body{background:#0b0805;}
+.ftf-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--color-primary),var(--color-highlight));z-index:60;transition:width .1s linear;}
+.ftf-stage{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.ftf-stage__bg{position:absolute;inset:-10% 0;background-size:cover;background-position:center;will-change:transform;}
+.ftf-stage__scrim{position:absolute;inset:0;}
+.ftf-stage__inner{position:relative;z-index:3;max-width:760px;padding:0 var(--space-6);text-align:center;opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease-out,ease),transform 1s var(--ease-out,ease);}
+.ftf-stage.in .ftf-stage__inner{opacity:1;transform:translateY(0);}
+.ftf-step{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--color-highlight);margin-bottom:var(--space-5);}
+.ftf-line{font-family:var(--font-display);font-weight:500;font-size:clamp(2rem,5.5vw,4rem);line-height:1.12;color:#F4ECDF;text-shadow:0 2px 30px rgba(0,0,0,.6);}
+.ftf-line em{font-style:italic;color:var(--color-highlight);}
+.ftf-sub{margin:var(--space-6) auto 0;max-width:560px;font-size:var(--text-lg);line-height:1.7;color:rgba(244,236,223,.85);text-shadow:0 1px 20px rgba(0,0,0,.7);}
+.ftf-fox{width:46px;height:46px;margin:0 auto var(--space-5);display:block;filter:drop-shadow(0 0 14px rgba(212,168,83,.55));animation:foxTrot 3.4s ease-in-out infinite;}
+@keyframes foxTrot{0%,100%{transform:translateX(-8px) rotate(-2deg);}50%{transform:translateX(8px) rotate(2deg);}}
+.ftf-scrollcue{position:absolute;bottom:var(--space-7);left:50%;transform:translateX(-50%);z-index:4;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.2em;text-transform:uppercase;color:rgba(244,236,223,.6);animation:cueBob 2s ease-in-out infinite;}
+@keyframes cueBob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
+.ftf-final{text-align:center;background:radial-gradient(ellipse at 50% 30%,#1a1208,#0b0805);}
+.ftf-final__actions{margin-top:var(--space-8);display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;}
+@media(prefers-reduced-motion:reduce){.ftf-stage__inner{opacity:1;transform:none;}.ftf-fox{animation:none;}.ftf-scrollcue{animation:none;}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="ftf-progress" id="ftfProgress"></div>
+<header class="header" id="header">
+<div class="container header__inner">
+<a href="./index.html" class="header__brand" aria-label="Ancient Proof Home"><span class="header__brand-mark">&#9651;</span><span class="header__brand-text">Ancient Proof</span></a>
+<nav class="header__nav" id="nav" aria-label="Primary">
+<a href="./index.html" class="header__nav-link">Home</a>
+<a href="./codex.html" class="header__nav-link">Codex</a>
+<a href="./follow-the-fox.html" class="header__nav-link">Follow the Fox</a>
+<a href="./store.html" class="header__nav-link">Store</a>
+<a href="./code-of-the-hills.html" class="header__nav-link">The Code</a>
+<a href="./living-proof.html" class="header__nav-link">Living Proof</a>
+<a href="./about.html" class="header__nav-link">About</a>
+<a href="./folklore.html" class="header__nav-link" aria-current="page">Folklore</a>
+<a href="./contact.html" class="header__nav-link">Contact</a>
+</nav>
+<div class="header__actions">
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="theme-toggle__sun">&#9728;</span><span class="theme-toggle__moon">&#9789;</span></button>
+<a href="./contact.html" class="btn btn--primary btn--sm header__cta">Inquire</a>
+<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="ftf-stage" data-speed="0.25">
+<div class="ftf-stage__bg" style="background-image:url('./assets/hero-forest.png');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.55),rgba(11,8,5,.35) 45%,rgba(11,8,5,.85));"></div>
+<div class="ftf-stage__inner">
+<svg class="ftf-fox" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 20 L20 8 L26 22 Z M52 20 L44 8 L38 22 Z M14 22 C14 40 24 52 32 52 C40 52 50 40 50 22 C44 28 38 30 32 30 C26 30 20 28 14 22 Z" fill="#D4A853"/><circle cx="26" cy="34" r="2.5" fill="#0b0805"/><circle cx="38" cy="34" r="2.5" fill="#0b0805"/><path d="M32 40 L29 44 L35 44 Z" fill="#0b0805"/></svg>
+<span class="ftf-step">The Folklore</span>
+<h1 class="ftf-line">Before the bottle, <em>there was the telling.</em></h1>
+<p class="ftf-sub">Every drop of Ancient Proof carries a story the hill folk told long before anyone thought to distill it. Scroll down into the old country, and meet the fox who started it all.</p>
+</div>
+<div class="ftf-scrollcue">Scroll into the legend &#8595;</div>
+</section>
+<section class="ftf-stage" data-speed="0.3">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-appalachian.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.6),rgba(11,8,5,.35) 45%,rgba(11,8,5,.85));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Old Telling</span>
+<h2 class="ftf-line">The hill folk had a name for her: <em>the Jinroot Fox.</em></h2>
+<p class="ftf-sub">She was no common animal, they said &mdash; the root's own shadow, sent up from the dark to test whoever came digging. The greedy she led in circles until dark. The patient she led home. Trappers swore they'd see her at first light on the ridgeline, then gone the moment they blinked.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.28">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-forest.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.7),rgba(11,8,5,.4) 50%,rgba(11,8,5,.8));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Bargain of the Slope</span>
+<h2 class="ftf-line">Take only the four-prong. <em>Leave the berries. Speak your thanks.</em></h2>
+<p class="ftf-sub">That was the bargain, passed from one sang-hunter to the next. Break it &mdash; dig the young root, take the seed, leave no thanks &mdash; and the fox would not run for you again. The slope would close its oldest roots to you forever. Keep it, and she'd lead you to the proof your grandfather only dreamed of.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.32">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-wild.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.55),rgba(11,8,5,.3) 45%,rgba(11,8,5,.9));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Root That Listens</span>
+<h2 class="ftf-line">They said the oldest root <em>could hear you coming.</em></h2>
+<p class="ftf-sub">A root that has weathered two hundred winters learns the sound of boots and the sound of greed. The old diggers walked soft and spoke soft. “The root don't lie,” they'd say, “you just gotta be quiet enough to hear it.” The fox was only there to teach you how to listen.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.3">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-digging.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.6),rgba(11,8,5,.35) 45%,rgba(11,8,5,.88));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">A Hunter Named HEZ</span>
+<h2 class="ftf-line">Most chased her for the money. <em>HEZ followed to listen.</em></h2>
+<p class="ftf-sub">A third-generation digger, he walked the Bourbon County ridges before light for thirty seasons, reading the land the way the old tellings taught. He kept the Code while others stripped the hills bare. And on one cold morning she stopped, looked back once, and showed him the root older than the county itself.</p>
+</div>
+</section>
+<section class="ftf-stage ftf-final" data-speed="0">
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Proof in the Bottle</span>
+<h2 class="ftf-line">He carried the root.<br><em>We carry the proof.</em></h2>
+<p class="ftf-sub">The legend isn't decoration &mdash; it's the recipe. Every bottle of Ancient Proof keeps the Code the fox taught: take only what's earned, give thanks, and let time do the rest.</p>
+<div class="ftf-final__actions">
+<a href="./follow-the-fox.html" class="btn btn--primary btn--lg">Follow the Fox</a>
+<a href="./codex.html#chapter-hez" class="btn btn--ghost btn--lg">Meet HEZ</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__inner">
+<div class="footer__brand">
+<a href="./index.html" class="header__brand" aria-label="Ancient Proof Home"><span class="header__brand-mark">&#9651;</span><span class="header__brand-text">Ancient Proof</span></a>
+<p class="footer__tagline">Root of the Mountain. Spirit of the Ages.<br>Bourbon County, Kentucky &middot; Est. 2020</p>
+</div>
+<div class="footer__col">
+<h4 class="footer__heading">Explore</h4>
+<a href="./codex.html" class="footer__link">Codex of the Root</a>
+<a href="./follow-the-fox.html" class="footer__link">Follow the Fox</a>
+<a href="./folklore.html" class="footer__link">Folklore</a>
+<a href="./code-of-the-hills.html" class="footer__link">The Code of the Hills</a>
+<a href="./living-proof.html" class="footer__link">Living Proof</a>
+<a href="./store.html" class="footer__link">The Store</a>
+</div>
+<div class="footer__col">
+<h4 class="footer__heading">Contact</h4>
+<a href="mailto:info@ancientproof.com" class="footer__link">info@ancientproof.com</a>
+<a href="tel:12707845012" class="footer__link">1.270.784.5012</a>
+<span class="footer__link">Bourbon County, KY</span>
+</div>
+</div>
+<div class="container footer__bottom"><p>&copy; 2026 Ancient Proof. All rights reserved. Please drink responsibly.</p></div>
+</footer>
+<script src="./app.js"></script>
+<script>
+(function(){
+var stages=[].slice.call(document.querySelectorAll('.ftf-stage'));
+var bar=document.getElementById('ftfProgress');
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.25});
+stages.forEach(function(s){io.observe(s);});
+}else{stages.forEach(function(s){s.classList.add('in');});}
+var ticking=false;
+function onScroll(){
+var h=document.documentElement;
+var max=h.scrollHeight-h.clientHeight;
+var p=max>0?(h.scrollTop||window.scrollY)/max:0;
+if(bar)bar.style.width=(p*100)+'%';
+if(!reduce){stages.forEach(function(s){var bg=s.querySelector('.ftf-stage__bg');if(!bg)return;var r=s.getBoundingClientRect();var speed=parseFloat(s.getAttribute('data-speed'))||0.25;var off=(r.top)*-speed;bg.style.transform='translateY('+off+'px)';});}
+ticking=false;
+}
+window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+onScroll();
+})();
+</script>
+</body>
+</html>
