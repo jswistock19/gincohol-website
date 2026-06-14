@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Perplexity Computer">
+<title>Follow the Fox — Ancient Proof</title>
+<meta name="description" content="Follow the fox down the holler at dawn, deeper into the Kentucky hills, to the 250-year-old root that started Ancient Proof.">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<style>
+body{background:#0b0805;}
+.ftf-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--color-primary),var(--color-highlight));z-index:60;transition:width .1s linear;}
+.ftf-stage{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.ftf-stage__bg{position:absolute;inset:-10% 0;background-size:cover;background-position:center;will-change:transform;}
+.ftf-stage__scrim{position:absolute;inset:0;}
+.ftf-stage__inner{position:relative;z-index:3;max-width:760px;padding:0 var(--space-6);text-align:center;opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease-out,ease),transform 1s var(--ease-out,ease);}
+.ftf-stage.in .ftf-stage__inner{opacity:1;transform:translateY(0);}
+.ftf-step{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--color-highlight);margin-bottom:var(--space-5);}
+.ftf-line{font-family:var(--font-display);font-weight:500;font-size:clamp(2rem,5.5vw,4rem);line-height:1.12;color:#F4ECDF;text-shadow:0 2px 30px rgba(0,0,0,.6);}
+.ftf-line em{font-style:italic;color:var(--color-highlight);}
+.ftf-sub{margin:var(--space-6) auto 0;max-width:560px;font-size:var(--text-lg);line-height:1.7;color:rgba(244,236,223,.85);text-shadow:0 1px 20px rgba(0,0,0,.7);}
+.ftf-fox{width:46px;height:46px;margin:0 auto var(--space-5);display:block;filter:drop-shadow(0 0 14px rgba(212,168,83,.55));animation:foxTrot 3.4s ease-in-out infinite;}
+@keyframes foxTrot{0%,100%{transform:translateX(-8px) rotate(-2deg);}50%{transform:translateX(8px) rotate(2deg);}}
+.ftf-scrollcue{position:absolute;bottom:var(--space-7);left:50%;transform:translateX(-50%);z-index:4;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.2em;text-transform:uppercase;color:rgba(244,236,223,.6);animation:cueBob 2s ease-in-out infinite;}
+@keyframes cueBob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
+.ftf-final{text-align:center;background:radial-gradient(ellipse at 50% 30%,#1a1208,#0b0805);}
+.ftf-final__actions{margin-top:var(--space-8);display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;}
+@media(prefers-reduced-motion:reduce){.ftf-stage__inner{opacity:1;transform:none;}.ftf-fox{animation:none;}.ftf-scrollcue{animation:none;}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="ftf-progress" id="ftfProgress"></div>
+<div class="age-gate hidden" id="ageGate">
+<div class="age-gate__inner">
+<p class="age-gate__tag">Ancient Proof</p>
+<h2 class="age-gate__title">Enter the Still</h2>
+<p class="age-gate__text">The root is old. You must not be. Confirm your date of birth to cross the threshold.</p>
+<div class="age-gate__fields">
+<input type="text" id="ageMonth" inputmode="numeric" maxlength="2" placeholder="MM" aria-label="Birth month">
+<input type="text" id="ageDay" inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Birth day">
+<input type="text" id="ageYear" inputmode="numeric" maxlength="4" placeholder="YYYY" aria-label="Birth year">
+</div>
+<p class="age-gate__error" id="ageError"></p>
+<button class="btn btn--primary btn--lg" id="ageVerifyBtn">Cross the Threshold</button>
+<p class="age-gate__legal">You must be of legal drinking age. Please enjoy Ancient Proof responsibly.</p>
+</div>
+</div>
+<header class="header" id="header">
+<div class="container header__inner">
+<a href="./index.html" class="header__brand" aria-label="Ancient Proof Home"><span class="header__brand-mark">&#9651;</span><span class="header__brand-text">Ancient Proof</span></a>
+<nav class="header__nav" id="nav" aria-label="Primary">
+<a href="./index.html" class="header__nav-link">Home</a>
+<a href="./codex.html" class="header__nav-link">Codex</a>
+<a href="./follow-the-fox.html" class="header__nav-link" aria-current="page">Follow the Fox</a>
+<a href="./store.html" class="header__nav-link">Store</a>
+<a href="./code-of-the-hills.html" class="header__nav-link">The Code</a>
+<a href="./living-proof.html" class="header__nav-link">Living Proof</a>
+<a href="./about.html" class="header__nav-link">About</a>
+<a href="./contact.html" class="header__nav-link">Contact</a>
+</nav>
+<div class="header__actions">
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="theme-toggle__sun">&#9728;</span><span class="theme-toggle__moon">&#9789;</span></button>
+<a href="./contact.html" class="btn btn--primary btn--sm header__cta">Inquire</a>
+<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="ftf-stage" data-speed="0.2">
+<div class="ftf-stage__bg" style="background-image:url('./assets/hero-forest.png');"></div>
+<div class="ftf-stage__scrim" style="background:radial-gradient(ellipse 90% 80% at 50% 50%,transparent 0%,rgba(11,8,5,.5) 55%,rgba(11,8,5,.92) 100%);"></div>
+<div class="ftf-stage__inner">
+<svg class="ftf-fox" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 14l10 8 14-4 14 4 10-8-4 16 6 10-12 6-14 4-14-4-12-6 6-10z" fill="#D4A853"/><circle cx="24" cy="30" r="2.4" fill="#0b0805"/><circle cx="40" cy="30" r="2.4" fill="#0b0805"/><path d="M28 38l4 4 4-4z" fill="#0b0805"/></svg>
+<span class="ftf-step">Before Dawn</span>
+<h1 class="ftf-line">There&rsquo;s a fox on the <em>shaded slope.</em></h1>
+<p class="ftf-sub">Old hunters knew her. She runs the ridge before the light comes up, and where she goes, the root is waiting. Follow her down.</p>
+</div>
+<div class="ftf-scrollcue">Scroll to follow &darr;</div>
+</section>
+<section class="ftf-stage" data-speed="0.28">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-forest.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.85),rgba(11,8,5,.45) 50%,rgba(11,8,5,.9));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">Into the Trees</span>
+<h2 class="ftf-line">The light comes through sideways, gold and low.</h2>
+<p class="ftf-sub">The canopy closes overhead. Damp leaf and cold stone. You stop talking. The hill only gives up its secret to the quiet.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.32">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-appalachian.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:radial-gradient(ellipse 80% 70% at 50% 45%,transparent,rgba(11,8,5,.6) 60%,rgba(11,8,5,.95));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">Deeper Down the Holler</span>
+<h2 class="ftf-line">She waits at the edge of the green, then <em>slips on.</em></h2>
+<p class="ftf-sub">Three-prong, then four. Red berries you leave for next season. You ask the land before you take, and you thank it after. That&rsquo;s the Code.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.36">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-digging.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:linear-gradient(180deg,rgba(11,8,5,.9),rgba(11,8,5,.35) 45%,rgba(11,8,5,.92));"></div>
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Shaded Slope</span>
+<h2 class="ftf-line">Then she stops. Looks back once. And is gone.</h2>
+<p class="ftf-sub">Where she stood, the leaves are different. Older. You kneel. You already know before the mattock touches the ground.</p>
+</div>
+</section>
+<section class="ftf-stage" data-speed="0.4">
+<div class="ftf-stage__bg" style="background-image:url('./assets/gallery-ginseng-roots.jpg');"></div>
+<div class="ftf-stage__scrim" style="background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(184,134,11,.18),rgba(11,8,5,.7) 55%,rgba(11,8,5,.97));"></div>
+<div class="ftf-stage__inner">
+<svg class="ftf-fox" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 14l10 8 14-4 14 4 10-8-4 16 6 10-12 6-14 4-14-4-12-6 6-10z" fill="#D4A853"/><circle cx="24" cy="30" r="2.4" fill="#0b0805"/><circle cx="40" cy="30" r="2.4" fill="#0b0805"/><path d="M28 38l4 4 4-4z" fill="#0b0805"/></svg>
+<span class="ftf-step">Two and a Half Centuries Down</span>
+<h1 class="ftf-line">A root older than the county. <em>The one that started everything.</em></h1>
+<p class="ftf-sub">Two hundred and fifty years in the dark, growing slow. This is the root HEZ found. This is the proof in the bottle.</p>
+</div>
+</section>
+<section class="ftf-stage ftf-final">
+<div class="ftf-stage__inner">
+<span class="ftf-step">The Root Don&rsquo;t Lie</span>
+<h2 class="ftf-line">He carried the root.<br><em>We carry the proof.</em></h2>
+<p class="ftf-sub">You followed her all the way down. Now taste what she was guarding.</p>
+<div class="ftf-final__actions">
+<a href="./store.html" class="btn btn--primary btn--lg">Enter the Store</a>
+<a href="./codex.html#chapter-hez" class="btn btn--outline btn--lg">Meet HEZ</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__inner">
+<div class="footer__brand">
+<a href="./index.html" class="header__brand" aria-label="Ancient Proof Home"><span class="header__brand-mark">&#9651;</span><span class="header__brand-text">Ancient Proof</span></a>
+<p class="footer__tagline">Root of the Mountain. Spirit of the Ages.<br>Bourbon County, Kentucky &middot; Est. 2020</p>
+</div>
+<div class="footer__col">
+<h4 class="footer__heading">Explore</h4>
+<a href="./codex.html" class="footer__link">Codex of the Root</a>
+<a href="./follow-the-fox.html" class="footer__link">Follow the Fox</a>
+<a href="./code-of-the-hills.html" class="footer__link">The Code of the Hills</a>
+<a href="./living-proof.html" class="footer__link">Living Proof</a>
+<a href="./store.html" class="footer__link">The Store</a>
+</div>
+<div class="footer__col">
+<h4 class="footer__heading">Contact</h4>
+<a href="mailto:info@ancientproof.com" class="footer__link">info@ancientproof.com</a>
+<a href="tel:12707845012" class="footer__link">1.270.784.5012</a>
+<span class="footer__link">Bourbon County, KY</span>
+</div>
+</div>
+<div class="container footer__bottom"><p>&copy; 2026 Ancient Proof. All rights reserved. Please drink responsibly.</p></div>
+</footer>
+<script src="./app.js"></script>
+<script>
+(function(){
+var stages=[].slice.call(document.querySelectorAll('.ftf-stage'));
+var bar=document.getElementById('ftfProgress');
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.25});
+stages.forEach(function(s){io.observe(s);});
+}else{stages.forEach(function(s){s.classList.add('in');});}
+var ticking=false;
+function onScroll(){
+var h=document.documentElement;
+var max=h.scrollHeight-h.clientHeight;
+var p=max>0?(h.scrollTop||window.scrollY)/max:0;
+if(bar)bar.style.width=(p*100)+'%';
+if(!reduce){stages.forEach(function(s){var bg=s.querySelector('.ftf-stage__bg');if(!bg)return;var r=s.getBoundingClientRect();var speed=parseFloat(s.getAttribute('data-speed'))||0.25;var off=(r.top)*-speed;bg.style.transform='translateY('+off+'px)';});}
+ticking=false;
+}
+window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+onScroll();
+})();
+</script>
+</body>
+</html>
